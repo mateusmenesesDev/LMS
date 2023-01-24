@@ -1,5 +1,7 @@
+import RouteList from './routes/RouteList';
+
 function App() {
-  return <div>INÍCIO</div>;
+  return <RouteList />;
 }
 
 export default App;
