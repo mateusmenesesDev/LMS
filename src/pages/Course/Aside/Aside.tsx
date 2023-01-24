@@ -15,7 +15,7 @@ export default function Aside() {
         className={`${
           aside ? 'w-screen' : 'w-0'
         } right-0 top-0 absolute h-screen 
-        md:block md:static bg-neutral md:max-w-[280px] lg:max-h-[493px] lg:overflow-auto lg:rounded-xl
+        md:w-[280px] md:static bg-neutral md:max-h-[493px] md:overflow-auto md:rounded-xl
          scrollbar-thin scrollbar-thumb-base-200 ease-in-out duration-300`}
       >
         <div className='btn md:hidden' onClick={() => setAside(false)}>
