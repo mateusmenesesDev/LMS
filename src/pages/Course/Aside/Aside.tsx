@@ -14,7 +14,9 @@ export default function Aside() {
       <div
         className={`${
           aside ? 'block' : 'hidden'
-        } w-screen left-0 top-0 absolute h-screen md:block md:static bg-neutral max-w-xl`}
+        } w-screen left-0 top-0 absolute h-screen 
+        md:block md:static bg-neutral md:max-w-[280px] lg:max-h-[493px] lg:overflow-auto lg:rounded-xl
+         scrollbar-thin scrollbar-thumb-base-200`}
       >
         <div className='btn md:hidden' onClick={() => setAside(false)}>
           X
@@ -28,6 +30,15 @@ export default function Aside() {
         </ClasseList>
         <ClasseList Icon={MdOutlineSlowMotionVideo}>
           Aula 03 - O que é um framework?
+        </ClasseList>
+        <ClasseList Icon={MdOutlineSlowMotionVideo}>
+          Aula 04 - Início do React
+        </ClasseList>
+        <ClasseList Icon={MdOutlineSlowMotionVideo}>
+          Aula 04 - Início do React
+        </ClasseList>
+        <ClasseList Icon={MdOutlineSlowMotionVideo}>
+          Aula 04 - Início do React
         </ClasseList>
         <ClasseList Icon={MdOutlineSlowMotionVideo}>
           Aula 04 - Início do React

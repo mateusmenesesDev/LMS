@@ -8,5 +8,5 @@ module.exports = {
   daisyui: {
     themes: ['business', 'emerald'],
   },
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), require('tailwind-scrollbar')],
 };
