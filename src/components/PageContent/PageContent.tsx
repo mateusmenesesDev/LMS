@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import SecondayMenu from '../SecondaryMenu/SecondaryMenu';
 import Sidebar from '../Sidebar/Sidebar';
 
-function PageContent() {
+function PageContent({ children }: { children: React.ReactNode }) {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [openSecondary, setOpenSecondary] = useState(false);
@@ -20,9 +20,10 @@ function PageContent() {
     if (openSidebar) setOpenSecondary(false);
   }
 
-  function handleOpenSecondary(event: React.MouseEvent<EventTarget>) {
+  function handleOpenSecondary(/*event: React.MouseEvent<EventTarget>*/) {
     // id and event are for setting custom elements in the Secondary Bar
-    const { id } = (event.currentTarget as HTMLLIElement);
+    // const { id } = (event.currentTarget as HTMLLIElement);
+    
     setOpenSecondary((prevState) => !prevState);
   }
 
@@ -34,7 +35,9 @@ function PageContent() {
       <div className="relative h-screen lg:flex gap-0">
         <Sidebar checked={openSidebar} onClick={handleOpenSecondary} />
         <SecondayMenu sidebarOpen={openSecondary} />
-        <div className="h-52 text-center w-full grid place-items-center">Page content</div>
+        <div className="w-full">
+          { children && children }
+        </div>
       </div>
     </>
   );

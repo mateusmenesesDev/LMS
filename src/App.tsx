@@ -3,7 +3,9 @@ import PageContent from './components/PageContent/PageContent';
 function App() {
   return (
     <>
-      <PageContent />      
+      <PageContent>
+        {/* Add all componentes of the page here */}
+      </PageContent>      
     </>
   );
 }
