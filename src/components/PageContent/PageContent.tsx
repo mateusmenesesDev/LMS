@@ -23,7 +23,7 @@ function PageContent({ children }: { children: React.ReactNode }) {
   function handleOpenSecondary(/*event: React.MouseEvent<EventTarget>*/) {
     // id and event are for setting custom elements in the Secondary Bar
     // const { id } = (event.currentTarget as HTMLLIElement);
-    
+
     setOpenSecondary((prevState) => !prevState);
   }
 
@@ -32,12 +32,10 @@ function PageContent({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header onClick={handleOpenSidebar} />
-      <div className="relative h-screen lg:flex gap-0">
+      <div className='relative h-[calc(100vh-64px)] lg:flex gap-0'>
         <Sidebar checked={openSidebar} onClick={handleOpenSecondary} />
         <SecondayMenu sidebarOpen={openSecondary} />
-        <div className="w-full">
-          { children && children }
-        </div>
+        <div className='w-full'>{children && children}</div>
       </div>
     </>
   );

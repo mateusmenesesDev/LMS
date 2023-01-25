@@ -3,7 +3,11 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        fullhd: '1700px',
+      },
+    },
   },
   daisyui: {
     themes: ['business', 'emerald'],

@@ -8,13 +8,13 @@ import Activities from './Activities/Activities';
 import Aside from './Aside/Aside';
 
 type Props = {
-  materials: { object: any }[];
+  materials?: { object: any }[];
 };
 export default function Course({ materials }: Props) {
   const [tab, setTab] = useState(1);
   return (
-    <div className='lg:pt-5 flex md:gap-5 lg:px-5 lg: justify-center'>
-      <div className='max-w-[738px] '>
+    <div className='lg:pt-5 flex md:gap-5 justify-center'>
+      <div className='max-w-5xl'>
         <video controls className='w-full'>
           <source src='src/assets/sample-video.mp4' type='video/mp4' />
         </video>
@@ -60,7 +60,7 @@ export default function Course({ materials }: Props) {
       </div>
       <div>
         <Aside />
-        <div className='hidden mt-5 p-5 md:block max-w-[280px] bg-neutral rounded-xl'>
+        <div className='hidden mt-5 p-5 md:block  bg-neutral rounded-xl'>
           <div className='mb-4'>Cursos Relacionados</div>
           <div>Card</div>
         </div>
