@@ -26,6 +26,8 @@ function App() {
     setOpenSecondary((prevState) => !prevState);
   }
 
+  console.log(openSecondary);
+
   return (
     <>
       <Header onClick={handleOpenSidebar} />
