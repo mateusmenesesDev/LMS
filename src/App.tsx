@@ -20,9 +20,9 @@ function App() {
     if (!openSidebar) setOpenSecondary(false);
   }
 
-  function handleOpenSecondary(event, id) {
+  function handleOpenSecondary(event:React.MouseEvent<SVGElement, MouseEvent>, id:string) {
     // id and event are for setting custom elements in the Secondary Bar
-    // console.log(event.target.id);
+    console.log(event.target, id);
     setOpenSecondary((prevState) => !prevState);
   }
 
