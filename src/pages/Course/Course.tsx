@@ -13,12 +13,12 @@ type Props = {
 export default function Course({ materials }: Props) {
   const [tab, setTab] = useState(1);
   return (
-    <div className='lg:pt-5 flex md:gap-5 justify-center'>
+    <div className='lg:pt-5 flex md:gap-5 justify-center text-neutral-content'>
       <div className='max-w-5xl'>
-        <video controls className='w-full'>
+        <video controls className='w-full '>
           <source src='src/assets/sample-video.mp4' type='video/mp4' />
         </video>
-        <div className='bg-primary text-primary-content py-5'>
+        <div className='bg-neutral  py-5'>
           <div className='flex justify-between items-center px-4 mb-9'>
             <h3 className='font-bold text-base md:text-xl'>
               Introdução ao Product Design
@@ -60,7 +60,7 @@ export default function Course({ materials }: Props) {
       </div>
       <div>
         <Aside />
-        <div className='hidden mt-5 p-5 md:block  bg-neutral rounded-xl'>
+        <div className='hidden mt-5 p-5 md:block  bg-neutral text-neutral-content rounded-xl'>
           <div className='mb-4'>Cursos Relacionados</div>
           <div>Card</div>
         </div>
