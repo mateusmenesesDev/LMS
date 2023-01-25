@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
+import SecondayMenu from './components/SecondaryMenu/SecondaryMenu';
 import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [openSecondary, setOpenSecondary] = useState(false);
 
   useEffect(() => {
     window.addEventListener('resize', function () {
@@ -13,18 +15,24 @@ function App() {
     });
   }, [openSidebar]);
 
-  // console.log(windowWidth);
-
-  function handleSidebar() {
+  function handleOpenSidebar() {
     setOpenSidebar((prevState) => !prevState);
+    if (!openSidebar) setOpenSecondary(false);
+  }
+
+  function handleOpenSecondary(event, id) {
+    // id and event are for setting custom elements in the Secondary Bar
+    // console.log(event.target.id);
+    setOpenSecondary((prevState) => !prevState);
   }
 
   return (
     <>
-      <Header onClick={handleSidebar} />
+      <Header onClick={handleOpenSidebar} />
       <div className="relative h-screen lg:flex">
-        <Sidebar checked={openSidebar} />
-        <div className="h-52 text-center w-full">Page content</div>
+        <Sidebar checked={openSidebar} onClick={handleOpenSecondary} />
+        <SecondayMenu sidebarOpen={openSecondary} />
+        <div className="h-52 text-center w-full grid place-items-center">Page content</div>
       </div>
     </>
   );
