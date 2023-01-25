@@ -13,7 +13,7 @@ type Props = {
 export default function Course({ materials }: Props) {
   const [tab, setTab] = useState(1);
   return (
-    <div className='mt-5 flex md:gap-5 lg:px-5 lg: justify-center'>
+    <div className='lg:pt-5 flex md:gap-5 lg:px-5 lg: justify-center'>
       <div className='max-w-[738px] '>
         <video controls className='w-full'>
           <source src='src/assets/sample-video.mp4' type='video/mp4' />
