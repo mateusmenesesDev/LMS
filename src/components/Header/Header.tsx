@@ -1,5 +1,5 @@
 import { SiSololearn } from 'react-icons/si';
-import Profile from '../Profile/Profile';
+import Profile from './Profile';
 
 type Props = {
   onClick: React.MouseEventHandler<HTMLLIElement>;

@@ -1,4 +1,4 @@
-import PageContent from './components/Menus/PageContent';
+import PageContent from './components/PageContent/PageContent';
 
 function App() {
   return (
