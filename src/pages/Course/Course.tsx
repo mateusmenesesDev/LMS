@@ -4,16 +4,14 @@ import {
   AiOutlineDownload,
   AiOutlineFilePdf,
 } from 'react-icons/ai';
+import Card from '../../components/Card';
 import Activities from './Activities/Activities';
 import Aside from './Aside/Aside';
 
-type Props = {
-  materials?: { object: any }[];
-};
-export default function Course({ materials }: Props) {
+export default function Course() {
   const [tab, setTab] = useState(1);
   return (
-    <div className='lg:pt-5 flex md:gap-5 justify-center text-neutral-content'>
+    <div className='flex justify-center md:px-2 md:gap-5 lg:pt-5   '>
       <div className='max-w-5xl'>
         <video controls className='w-full rounded-t-lg'>
           <source src='src/assets/sample-video.mp4' type='video/mp4' />
@@ -60,9 +58,22 @@ export default function Course({ materials }: Props) {
       </div>
       <div>
         <Aside />
-        <div className='hidden mt-5 p-5 md:block  bg-neutral text-neutral-content rounded-xl'>
+        <div
+          className='hidden md:block max-w-[280px] max-h-[379px] mb-14 overflow-auto fullhd:max-w-none fullhd:w-[400px] mt-5 p-5 
+                        bg-neutral text-neutral-content rounded-xl'
+        >
           <div className='mb-4'>Cursos Relacionados</div>
-          <div>Card</div>
+          <div className='grid gap-5'>
+            <div className='max-w-[340px]'>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+          </div>
         </div>
       </div>
     </div>

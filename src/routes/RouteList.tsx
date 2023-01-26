@@ -6,8 +6,8 @@ export default function RouteList() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Course />} path='/course' />
         <Route element={<Courses />} path='/' />
+        <Route element={<Course />} path='/course' />
       </Routes>
     </BrowserRouter>
   );
