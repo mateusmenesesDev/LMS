@@ -1,7 +1,14 @@
-import Login from './pages/Login/Login';
+import PageContent from './components/PageContent/PageContent';
+import RouteList from './routes/RouteList';
 
 function App() {
-  return <div><Login /></div>;
+  return (
+    <>
+      <PageContent>
+        <RouteList />
+      </PageContent>
+    </>
+  );
 }
 
 export default App;

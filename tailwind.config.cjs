@@ -3,10 +3,14 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        fullhd: '1700px',
+      },
+    },
   },
   daisyui: {
     themes: ['business', 'emerald'],
   },
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), require('tailwind-scrollbar'),  require('@shrutibalasa/tailwind-grid-auto-fit'),],
 };
