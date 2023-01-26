@@ -1,9 +1,9 @@
 import {FiBookOpen, FiWatch} from 'react-icons/fi';
 
 function Card() {
-  return ( 
-    <div className="card w-96 bg-neutral text-neutral-content shadow-xl rounded-2xl">
-      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+  return (
+    <div className="card bg-neutral text-neutral-content shadow-xl rounded-2xl">
+      <figure><img src="https://placeimg.com/400/225/arch" className='w-full' alt="Shoes" /></figure>
       <div className="card-body">
         <h2 className="card-title">
             Logo Design

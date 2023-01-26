@@ -13,5 +13,5 @@ module.exports = {
   daisyui: {
     themes: ['business', 'emerald'],
   },
-  plugins: [require('daisyui'), require('tailwind-scrollbar')],
+  plugins: [require('daisyui'), require('tailwind-scrollbar'),  require('@shrutibalasa/tailwind-grid-auto-fit'),],
 };
