@@ -15,10 +15,10 @@ export default function Course({ materials }: Props) {
   return (
     <div className='lg:pt-5 flex md:gap-5 justify-center text-neutral-content'>
       <div className='max-w-5xl'>
-        <video controls className='w-full '>
+        <video controls className='w-full rounded-t-lg'>
           <source src='src/assets/sample-video.mp4' type='video/mp4' />
         </video>
-        <div className='bg-neutral  py-5'>
+        <div className='bg-neutral rounded-b-lg  py-5'>
           <div className='flex justify-between items-center px-4 mb-9'>
             <h3 className='font-bold text-base md:text-xl'>
               Introdução ao Product Design
@@ -41,7 +41,7 @@ export default function Course({ materials }: Props) {
               Atividades
             </a>
           </div>
-          <div className='mt-8 px-2'>
+          <div className='mt-8 px-10'>
             <div>
               {tab === 1 ? (
                 <div>
