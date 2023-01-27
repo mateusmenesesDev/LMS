@@ -19,7 +19,7 @@ export default function Aside() {
         <div className='btn md:hidden' onClick={() => setAside(false)}>
           X
         </div>
-        <div className='font-bold text-xl text-center mb-16'>AULAS</div>
+        <div className='font-bold text-xl text-center mb-8 md:mt-6'>AULAS</div>
         <ClasseList Icon={MdOutlineSlowMotionVideo}>
           Aula 01 - Aprendendo HTML
         </ClasseList>

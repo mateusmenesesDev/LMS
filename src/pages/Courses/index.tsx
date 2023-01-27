@@ -1,5 +1,5 @@
-import Card from '../../../components/Card';
-import InfoCard from './infoCard';
+import Card from '../../components/Card';
+import InfoCard from './InfoCard';
 
 function Courses() {
   return (
