@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Course from '../pages/Course/Course';
-import Courses from '../pages/Courses/Index';
+import Courses from '../pages/Courses';
 
 export default function RouteList() {
   return (
