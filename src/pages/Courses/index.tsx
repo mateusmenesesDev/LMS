@@ -1,3 +1,4 @@
+import { FiFilter, FiSearch } from 'react-icons/fi';
 import Card from '../../components/Card';
 import InfoCard from './InfoCard';
 
@@ -18,11 +19,21 @@ function Courses() {
             </div>
           </div>
         </div>
-        <input
-          type='text'
-          placeholder='Search'
-          className='input input-bordered input-info w-full max-w-xs m-5 rounded-lg'
-        />
+        <div className='w-full flex justify-between'>
+          <div className='relative'>
+            <FiSearch className='absolute top-9 left-7' />
+            <input
+              type='text'
+              placeholder='Search'
+              className='px-8 input input-bordered input-info w-full max-w-xs m-5 rounded-lg'
+            />
+          </div>
+          <div>
+            <div className='bg-neutral p-4 rounded-md m-5'>
+              <FiFilter/>
+            </div>
+          </div>
+        </div>
         <div className='grid gap-4 grid-auto-fit-sm md:grid-auto-fit-[20rem] justify-items-center w-full p-5'>
           <Card
             progress='50'
