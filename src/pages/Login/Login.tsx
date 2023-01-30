@@ -1,21 +1,15 @@
-import React, { useRef } from 'react';
-import { login, register } from '../../services/firebase/auth';
+import React, { useEffect, useRef } from 'react';
+import { useAuth } from '../../context/Auth';
 
 export default function Login() {
   const passwordRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
+  const { login } = useAuth();
 
   async function handleLogin(e: React.SyntheticEvent) {
     e.preventDefault();
     if (passwordRef.current && emailRef.current) {
       await login(emailRef.current.value, passwordRef.current.value);
-    }
-  }
-
-  async function handleRegister(e: React.SyntheticEvent) {
-    e.preventDefault();
-    if (passwordRef.current && emailRef.current) {
-      await register(emailRef.current.value, passwordRef.current.value);
     }
   }
 
@@ -51,13 +45,6 @@ export default function Login() {
               onClick={handleLogin}
             >
               Entrar
-            </button>
-            <button
-              type='submit'
-              className='btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg'
-              onClick={handleRegister}
-            >
-              Registrar
             </button>
           </div>
         </form>
